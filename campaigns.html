@@ -511,6 +511,16 @@
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+            <script>
+                if ('userAgentData' in navigator) {
+    navigator.userAgentData.getHighEntropyValues(['platform', 'model', 'mobile']).then(ua => {
+        console.log(ua.platform); // Like 'Windows' or 'Android'
+        console.log(ua.model); // Like 'Pixel 4'
+        console.log(ua.mobile); // true or false
+    });
+}
+
+            </script>
         </section>
 
     </main>
