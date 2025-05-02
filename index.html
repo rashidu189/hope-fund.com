@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HopeFund - Money Donation Platform</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #0a4275;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #063158;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 60px 20px;
+      background: #eaf4ff;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .hero button {
+      margin-top: 30px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #0a4275;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .campaigns, .impact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      width: 280px;
+    }
+    footer {
+      background-color: #063158;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    footer a {
+      color: #f9d342;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>HopeFund</h1>
+  <p>Give Hope. Make a Difference.</p>
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="donate.html">Donate</a>
+  <a href="campaigns.html">Campaigns</a>
+  <a href="about.html">About Us</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<section class="hero">
+  <h1>Your Help Can Change Lives</h1>
+  <p>Every dollar you donate goes directly to supporting families, children, and communities in need.</p>
+  <button onclick="location.href='donate.html'">Donate Now</button>
+  <button onclick="location.href='campaigns.html'">Campaigns</button>
+</section>
+
+<section class="section">
+  <h2>Ongoing Campaigns</h2>
+  <div class="campaigns">
+    <div class="card">
+      <h3>Feed 100 Families</h3>
+      <p>Help provide essential food packs to families affected by poverty and inflation.</p>
+    </div>
+    <div class="card">
+      <h3>Emergency Medical Fund</h3>
+      <p>Support urgent surgeries and treatments for those who can't afford healthcare.</p>
+    </div>
+    <div class="card">
+      <h3>School Supplies for Kids</h3>
+      <p>Donate to give underprivileged children access to books and stationery.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Our Impact</h2>
+  <div class="impact">
+    <div class="card">
+      <h4>10,000M+</h4>
+      <p>Meals Delivered</p>
+    </div>
+    <div class="card">
+      <h4>2,000M+</h4>
+      <p>Medical Cases Funded</p>
+    </div>
+    <div class="card">
+      <h4>500B+</h4>
+      <p>Volunteers Nationwide</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 HopeFund. All rights reserved. | <a href="#">Privacy Policy</a></p>
+</footer>
+
+</body>
+</html>

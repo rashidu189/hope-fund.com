@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact - HopeFund</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0a4275;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #063158;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            background: #eaf4ff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #0a4275;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: #063158;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer a {
+            color: #f9d342;
+            text-decoration: none;
+        }
+
+        .social-icon {
+            width: 24px;
+            /* Set width of the icon */
+            height: 24px;
+            /* Set height of the icon */
+            fill: #333;
+            /* Default color of the icon */
+            transition: fill 0.3s ease-in-out;
+            /* Smooth transition on hover */
+        }
+
+        .social-icon:hover {
+            fill: #007bff;
+            /* Change color on hover */
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 15px;
+            /* Space between icons */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HopeFund</h1>
+        <p>Give Hope. Make a Difference.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="donate.html">Donate</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <main>
+        <form id="messageForm" runat="server" method="post" onsubmit="return sendMessage();">
+            <label>Name: <input type="text" name="name" id="name" required></label><br>
+            <label>Email: <input type="email" name="email" id="email" required></label><br>
+            <label>Message:<br><textarea name="message" id="message" required></textarea></label><br>
+            <button style="margin-bottom: 15px;" type="submit">Send</button>
+        </form>
+
+        <!-- Display Success or Error Message -->
+<div id="responseMessage" style="display:none; margin-top: 15px;"></div>
+        <hr>
+
+        <section>
+            <h3 style="margin-bottom: 35px;">Contact Us On Social Media</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><a href="https://facebook.com/hopefund" target="_blank">
+                        Facebook
+                    </a></li>
+                <li><a href="https://youtube.com/@hopefund" target="_blank">
+                        YouTube
+                    </a></li>
+                <li><a href="https://wa.me/1234567890" target="_blank">
+                        WhatsApp
+                    </a></li>
+                <li><a href="https://instagram.com/hopefund" target="_blank">
+                        Instagram
+                    </a></li>
+                <li><a href="https://www.tiktok.com/@hopefund" target="_blank">
+                        TikTok
+                    </a></li>
+                <li><a href="https://linkedin.com/in/hopefund" target="_blank">
+                        LinkedIn
+                    </a></li>
+                <li><a href="https://twitter.com/hopefund" target="_blank">
+                        Twitter
+                    </a></li>
+            </ul>
+        </section>
+    </main>
+    <!-- Include FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <footer>
+        <p>&copy; 2025 HopeFund. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+
+<script>
+    function sendMessage() {
+    var formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    };
+
+    // Simple validation before sending
+    if (!formData.name || !formData.email || !formData.message) {
+        displayMessage('Please fill in all fields.', 'error');
+        return false; // Prevent form submission
+    }
+
+    // Simulate a successful form submission
+    displayMessage('Your message has been sent successfully!', 'success');
+    return false; // Prevent page refresh
+}
+
+// Function to display success or error messages
+function displayMessage(message, type) {
+    var responseMessage = document.getElementById('responseMessage');
+    responseMessage.style.display = 'block';
+    
+    if (type === 'success') {
+        responseMessage.style.color = 'green';
+        responseMessage.innerHTML = message;
+    } else {
+        responseMessage.style.color = 'red';
+        responseMessage.innerHTML = message;
+    }
+}
+
+</script>
+
+</html>

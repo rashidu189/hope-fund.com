@@ -1,0 +1,213 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: #343a40;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Main Section */
+  main {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 8px;
+  }
+  
+  /* Headings */
+  h1, h2 {
+    color: #0d6efd;
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    padding: 12px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Cards for Campaigns */
+  .campaigns .card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+  
+  .campaigns .card h3 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+  }
+  
+  .campaigns .card p {
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 15px;
+    }
+  
+    nav {
+      padding: 15px;
+    }
+  
+    .campaigns .card {
+      padding: 10px;
+    }
+  }
+  
+  .campaign-image {
+    width: 100%; /* Makes the image responsive */
+    max-width: 400px; /* Maximum width */
+    height: auto; /* Keeps the aspect ratio */
+  }
+  
+  .card {
+    width: 800px; /* Set the card width */
+    height: 300px; /* Set the card height */
+    margin: 10px; /* Add space between the cards */
+    padding: 10px; /* Add padding inside the card */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for a subtle effect */
+    background-color: #fff; /* Card background color */
+  }
+  
+  .card.campaign-card {
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.campaign-content {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.campaign-image-wrapper {
+    flex: 1;
+    max-width: 400px;
+}
+
+.campaign-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.campaign-info {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.progress-bar-container {
+    margin: 15px 0;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-bottom: 5px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #28a745;
+    width: 0;
+    transition: width 0.5s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
